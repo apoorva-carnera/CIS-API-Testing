@@ -14,7 +14,7 @@ test.describe("Verify CIS API Test Cases", { tag: ["@API"] }, async () => {
     await scenario.getFirstFiveScenarios();
   });
 
-  test.only("Verify scenarios by the entered keyword", async ({}) => {
+  test("Verify scenarios by the entered keyword", async ({}) => {
     const apiContext = await request.newContext();
     const scenario = new getAllscenarios(apiContext);
     await scenario.getScenariosBySpecificKeyword();

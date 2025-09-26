@@ -34,6 +34,7 @@ export default class getAllscenarios {
     //console.log(JSON.stringify(responseBody, null, 2));
     const ids = this.responseBody.edges.map((edge) => edge.node.id);
     console.log("All Scenario IDs are: " + ids);
+    console.log("Total Scenario count is: " + `${ids.length}`);
     //console.log(responseBody);
   }
 
@@ -77,5 +78,6 @@ export default class getAllscenarios {
     this.responseBody = await this.response.json();
     const names = this.responseBody.edges.map((edge) => edge.node.name);
     console.log("Scenarios with filtered keyword are: " + names);
+    console.log("Total project count is: " + `${names.length}`);
   }
 }
